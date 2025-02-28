@@ -1,0 +1,50 @@
+.load {
+    animation: spinner 2s forwards;
+}
+
+@keyframes spinner {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.skew img {
+    transform: skew(5deg) translateX(25px);
+}
+
+.skew-center img {
+    transform: skew(5deg) translateX(-25px);
+}
+
+.bg-dark-50,
+.hover-dark:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: white;
+}
+
+.bg-light-50,
+.hover-light:hover {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    color: rgb(0, 0, 0);
+}
+
+.hover {
+    transition: all 0.3s ease;
+}
+
+.success:hover {
+    box-shadow: 0 0 20px 5px rgba(25, 135, 84, 0.5) !important;
+}
+
+.primary:hover {
+    box-shadow: 0 0 20px 5px rgba(13, 109, 253, 0.5) !important;
+}
+
+.warning:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.5) !important;
+}

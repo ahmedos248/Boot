@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-secondary">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed container-fluid" style="z-index: 15;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://img.freepik.com/free-vector/initials-letter-colorful-logo-design_474888-4328.jpg?t=st=1740707880~exp=1740711480~hmac=59c8b4a89795a3e87b423a7386c3bb956a9f605dba4b2010fdb4bfe61e4750d9&w=900"
+                        alt="Avatar Logo" style="width:40px;" class="rounded-start warning hover">
+                    <span
+                        class="text-warning btn btn-outline-warning warning bg-dark rounded-0 rounded-end">Intelligenza</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link active btn btn-outline-primary primary hover rounded-0 rounded-start"
+                                aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link active btn btn-outline-primary primary hover rounded-0 rounded-top"
+                                aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-warning rounded-0" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link d-none d-lg-block dropdown-toggle btn btn-outline-success success rounded-0 rounded-end"
+                                href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Options
+                            </a>
+                            <a class="nav-link d-lg-none dropdown-toggle btn btn-outline-success success rounded-0 rounded-bottom"
+                                href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Options
+                            </a>
+                            <ul class="dropdown-menu opacity-75" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Categories</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">AI news</a></li>
+                                <li><a class="dropdown-item" href="#">New wallpapers</a></li>
+                                <li><a class="dropdown-item" href="#">Live wallpapers</a></li>
+                                <li><a class="dropdown-item" href="#">Dark mode</a></li>
+                                <li><a class="dropdown-item" href="#">more..</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2 mb-3 mb-lg-0 bg-dark border border-secondary text-white"
+                            type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <button class="btn btn-outline-primary primary me-2" type="submit">Search</button>
+                    <button type="button" class="btn btn-outline-warning warning" data-bs-toggle="modal"
+                        data-bs-target="#myModal">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="position-fixed top-50 end-0 me-4 opacity-75" style="z-index: 90;transform: translateY(-50%);">
+            <a href="" class="fa-brands fa-facebook-f my-5 btn btn-primary primary fs-1 d-block"></a>
+            <a href="" class="fa-brands fa-whatsapp  my-5 btn btn-success success fs-1 d-block"></a>
+            <a href="" class="fa-brands fa-twitter my-5 btn btn-primary primary fs-1 d-block"></a>
+            <a href="" class="fa-brands fa-linkedin-in my-5 btn btn-primary primary fs-1 d-block"></a>
+            <a href="" class="fa-brands fa-instagram my-5 btn btn-warning warning fs-1 d-block"></a>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/20615.jpg" alt="forest" class="img-fluid w-100" style="max-height: 100vh;">
+                    <div class="carousel-caption rounded bg-dark-50">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                        <button type="button" class="btn btn-outline-success success">Visit Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/13768.jpg" class="img-fluid w-100" style="max-height: 100vh;" alt="ocean">
+                    <div class="carousel-caption rounded bg-dark-50">
+                        <h5>Second slide
+                            label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                        <button type="button" class="btn btn-outline-primary primary">Visit Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/11084.jpg" class="img-fluid w-100" style="max-height: 100vh;" alt="desert">
+                    <div class="carousel-caption rounded bg-dark-50">
+                        <h5>Third slide
+                            label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                        <button type="button" class="btn btn-outline-warning warning">Visit Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/567.jpg" class="img-fluid w-100" style="max-height: 100vh;" alt="city">
+                    <div class="carousel-caption rounded bg-dark-50">
+                        <h5>Third slide
+                            label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                        <button type="button" class="btn btn-outline-warning warning">Visit Us</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <strong class="modal-title">login</strong>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox
+                                input</label>
+                        </div>
+                    </form>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-outline-success success start">Login</button>
+                        <button type="button" class="btn btn-outline-danger end-0"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container-fluid bg-dark text-white p-4">
+            <h3>WELCOME</h3>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quos natus tempora voluptates quibusdam
+                iusto. Animi aperiam eum, temporibus accusantium blanditiis excepturi nesciunt quam, laborum ea modi
+                iure
+                sed. Ipsum.</P>
+            <button type="button" class="btn btn-outline-warning warning">Learn More</button>
+        </div>
+        <hr>
+        <div class="container-fluid text-center bg-dark text-white p-5 rounded">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item border border-dark">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button bg-secondary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-dark text-white">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item border border-dark">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed bg-secondary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-dark text-white">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item border border-dark">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed bg-secondary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body bg-dark text-white rounded-bottom">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid text-center bg-dark text-white p-2 rounded">
+            <h1>AI image generator styles</h1>
+        </div>
+        <div class="container-fluid px-4 pb-4 rounded border border-dark border-1">
+            <div class="container-fluid d-flex flex-wrap p-0 pt-3">
+                <h3 class="my-2">Write & Generate</h3><button
+                    class="btn btn-lg btn-outline-primary primary text-white border-0 mx-2">Press
+                    Here</button>
+            </div>
+            <button type="button" id="liveToastBtn"
+                class="btn btn-dark mb-3 position-relative btn-outline-primary primary" data-bs-toggle="popover"
+                data-bs-content="Downloading" tabindex="0">
+                Download
+                <span class="position-absolute w-100 h-100 top-0 start-0" id="tooltipTarget" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" title="Download to device"></span>
+            </button>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 200px; resize: none;background: url(https://img.freepik.com/free-photo/natural-rock-formations-landscape_23-2151723094.jpg?t=st=1740604147~exp=1740607747~hmac=974df0743851e93705c2cb8c660039afca436fc5ee8c6f12619ac7720e6f8645&w=1380);background-size: cover;"></textarea>
+                <label for="floatingTextarea2">Generate image</label>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid text-center bg-dark text-white p-2 rounded">
+            <h1>AI image generator styles</h1>
+        </div>
+        <div class="container-fluid px-4 pb-4 rounded border border-dark border-1">
+            <div class="container-fluid d-flex flex-wrap p-0 pt-3">
+                <h3 class="my-2">Write & Generate</h3><button
+                    class="btn btn-lg btn-outline-success success text-white border-0 mx-2">Press
+                    Here</button>
+            </div>
+            <button type="button" id="liveToastBtn"
+                class="btn btn-dark mb-3 position-relative success btn-outline-success" data-bs-toggle="popover"
+                data-bs-content="Downloading" tabindex="0">
+                Download
+                <span class="position-absolute w-100 h-100 top-0 start-0" id="tooltipTarget" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" title="Download to device"></span>
+            </button>
+            <div class="form-floating text-white">
+                <textarea class="form-control text-white text-start btn btn-outline-success"
+                    placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 200px; resize: none;background: url(https://img.freepik.com/free-vector/dark-toxic-game-cave-inside-cartoon-background-fantasy-poisonous-dungeon-with-green-waterfall-flow-underground-stream-design-adventure-inner-rock-mountain-scene-with-glow-sewage-river-bubble_107791-23130.jpg?t=st=1740681118~exp=1740684718~hmac=1af1679567ee7d0a314fc8d43082105d7f233db49ab012b375926d96604fd208&w=1380);background-size: cover;"></textarea>
+                <label for="floatingTextarea2">Generate image</label>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid text-center bg-dark text-white p-2 rounded">
+            <h1>AI image generator styles</h1>
+        </div>
+        <div class="container-fluid px-4 pb-4 rounded border border-dark border-1">
+            <div class="container-fluid d-flex flex-wrap p-0 pt-3">
+                <h3 class="my-2">Write & Generate</h3><button
+                    class="btn btn-lg btn-outline-warning border-0 mx-2 warning text-dark">Press
+                    Here</button>
+            </div>
+            <button type="button" id="liveToastBtn"
+                class="btn btn-dark btn-outline-warning mb-3 position-relative hover warning" data-bs-toggle="popover"
+                data-bs-content="Downloading" tabindex="0">
+                Download
+                <span class="position-absolute w-100 h-100 top-0 start-0" id="tooltipTarget" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" title="Download to device"></span>
+            </button>
+            <div class="form-floating text-white">
+                <textarea class="form-control text-white text-start btn btn-outline-warning"
+                    placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 200px; resize: none;background: url(https://img.freepik.com/free-photo/cyberpunk-neon-city-night-futuristic-city-scene-style-pixel-art-80-s-wallpaper-retro-future-generative-ai-illustration-urban-scene_1258-193652.jpg?t=st=1740680591~exp=1740684191~hmac=4cf301884900f5158c913d05dd80a8ebf5fca507811500da49d98c8d80b25922&w=1380);background-size: cover;"></textarea>
+                <label for="floatingTextarea2">Generate image</label>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 500;">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Bootstrap</strong>
+            </div>
+            <div class="toast-body">
+                Image downloaded successfully!
+                <div class="toast-footer d-flex justify-content-end p-1">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="toast">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-relative" style="height: 300px;background: url(images/img1.jpg)fixed;background-size: cover;">
+    </div>
+    <section>
+        <h1 class="bg-dark w-100 text-white text-center p-2 pb-4">Portraits for your Phone
+        </h1>
+        <div class="row p-5 justify-content-center w-100 m-0">
+            <div class="card hover success border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/closeup-beautiful-palm-trees-background_116348-43.jpg?t=st=1740624089~exp=1740627689~hmac=b7788598e7c813fa0f9e14f326767aa06a48bb8dd47244967c3158545bf0475e&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn success btn-outline-success position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover primary border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/assortment-colored-plant-leaves_23-2149337898.jpg?t=st=1740623923~exp=1740627523~hmac=3dc3a4191b9423953212303b3a70d839e08e0c25b9e09ae00a374c1cfc7a03d0&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn primary btn-outline-primary position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover warning border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/macro-shot-green-leaves-dark-background_181624-45740.jpg?t=st=1740624033~exp=1740627633~hmac=a4086938034b0770f48aaccab0b0851f49264998c83057289f6723457d71d877&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn warning btn-outline-warning position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover success border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/green-gray-mountains-daytime_422131-128.jpg?t=st=1740624251~exp=1740627851~hmac=b74205cc2f6259ac0a4798e5bafa2f14a05ca219df66ebd127a342ee2ff41a9a&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn success btn-outline-success position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover primary border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/beautiful-high-snowy-foggy-mountains-with-snow-being-blown-by-wind_181624-200.jpg?t=st=1740624391~exp=1740627991~hmac=3c4d10843b171a129eb481a80d7ad7e8ec5c033d1ff9b3043c81ead5bf6c7cd9&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn primary btn-outline-primary position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover warning border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/vertical-shot-people-walking-up-hill-near-desert-cliff-daytime_181624-1671.jpg?t=st=1740624616~exp=1740628216~hmac=6f1081fe3a4935441d0a810b69ee030a25ada60a8f416ce1db15abe8ae6d90cf&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn warning btn-outline-warning position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover success border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/close-up-green-jade-texture_23-2149397142.jpg?t=st=1740624868~exp=1740628468~hmac=097dc5003ff8d593e0ac9fc6df9e67d90edc42e82e45815abad5c00240e9aaf5&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn success btn-outline-success position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover primary border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/beautiful-photo-sea-waves_58702-10630.jpg?t=st=1740624956~exp=1740628556~hmac=3212a4b550fc1f58846b7c9033ec90ab87b6ab22908bc56f44fd3d380ed13478&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn primary btn-outline-primary position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover warning border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/sunrise_1203-7222.jpg?t=st=1740625026~exp=1740628626~hmac=e7a53c1a8deb54796a0e4d8778b93d5cc64a50fb3f591843475a97c2030fa217&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn warning btn-outline-warning position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover success border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/futuristic-building-with-natural-decorations-its-facade_181624-18273.jpg?t=st=1740625128~exp=1740628728~hmac=114fd4a6e202629bbd6c4f29740449c20ea459526c34d6fda3d2a5a8fdf1a5ed&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn success btn-outline-success position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover primary border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/modern-buildings-against-sky_1359-990.jpg?t=st=1740625185~exp=1740628785~hmac=14d837b34e89918c69cc4749dd79011d7b8592e42d18b37ca9792e3964e1fc9d&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn primary btn-outline-primary position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+            <div class="card hover warning border-2 shadow text-secondary col-12 col-md-6 col-lg-3 m-5 p-0 btn hover-dark bg-light-50 text-start border-dark border border-3"
+                style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/railway-sunrise_1150-10988.jpg?t=st=1740625241~exp=1740628841~hmac=4fd8ff4df1ea5fe03d20389fbbb610710c3f5437c63157ddf49d0ac2bcd95b91&w=740"
+                    class="card-img-top" style="height: 350px;" alt="rainforest">
+                <div class="card-body position-relative bg-dark-50">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some and</p>
+                    <a href="#" class="btn warning btn-outline-warning position-absolute end-0 top-0 m-2">Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="w-100" style="height: 300px;background: url(images/img2.jpg) fixed;background-size: cover;"></div>
+        <hr>
+        <h1 class="bg-dark w-100 text-white text-center p-4">Thanks For
+        </h1>
+        <div class="row w-100 p-5 justify-content-center m-0">
+            <div
+                class="card hover primary p-0 text-start border-dark border border-3 col-12 col-sm-8 col-md-6 col-xl-3 text-bg-dark m-5 h-auto">
+                <img src="https://img.freepik.com/free-photo/landmarks-shanghai-with-huangpu-river_1359-736.jpg?t=st=1740621992~exp=1740625592~hmac=78c9e056a4a55216302686a2dfa01c18d6ae637ee15e4d3c94de100102b709ee&w=740"
+                    class="card-img h-100 opacity-50" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">All thanks and appreciation</h5>
+                    <p class="card-text"><small><i class="fa-regular fa-clock"></i> July 14 2025</small></p>
+                    <div class="position-absolute bottom-0 mb-3">
+                        <img class="rounded-pill w-25 shadow-lg hover primary"
+                            src="https://img.freepik.com/free-photo/close-up-man-holding-controller_23-2149005238.jpg?t=st=1740622067~exp=1740625667~hmac=b5a683e0c7e7446da23592a8418ec311fe96d097a7fc619162979c6eba622e59&w=740"
+                            alt="">
+                        <p class="card-text"><small class="d-block">Eng Ahmed Osama</small>
+                            <small class="d-block">Front end developer</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="card hover success p-0 text-start border-dark border border-3 col-12 col-sm-8 col-md-6 col-xl-3 text-bg-dark m-5 h-auto">
+                <img src="https://img.freepik.com/free-photo/dome-park-surrounded-by-greenery-with-buildings-sunlight-sunset_181624-6080.jpg?t=st=1740621912~exp=1740625512~hmac=d1ad547b26e11987d0a97f2df4becb2349b5f5bb1c21f45ae6c6bd364fbc3625&w=740"
+                    class="card-img h-100 opacity-50" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">All thanks and appreciation</h5>
+                    <p class="card-text"><small><i class="fa-regular fa-clock"></i> July 14 2025</small></p>
+                    <div class="position-absolute bottom-0 mb-3">
+                        <img class="rounded-pill w-25 shadow-lg hover success"
+                            src="https://img.freepik.com/free-photo/portrait-sceptical-creative-man-green-blazer-dark-background_613910-17096.jpg?t=st=1740621684~exp=1740625284~hmac=57f1a1aa0c498963948b5ea8133d499a5866243e104975b7911b500159710e4e&w=740"
+                            alt="">
+                        <p class="card-text"><small class="d-block">Eng Ahmed Osama</small>
+                            <small class="d-block">Front end developer</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="card hover warning p-0 text-start border-dark border border-3 col-12 col-sm-8 col-md-6 col-xl-3 text-bg-dark m-5 h-auto">
+                <img src="https://img.freepik.com/free-photo/vertical-high-angle-shot-illuminated-highway-night_181624-24671.jpg?t=st=1740622342~exp=1740625942~hmac=73bc8e204aa3550fa55555922f345f13575509ed035eefe1a3bd4049016e8f75&w=740"
+                    class="card-img opacity-50" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">All thanks and appreciation</h5>
+                    <p class="card-text"><small><i class="fa-regular fa-clock"></i> July 14 2025</small></p>
+                    <div class="position-absolute bottom-0 mb-3">
+                        <img class="rounded-pill w-25 shadow-lg hover warning"
+                            src="https://img.freepik.com/free-photo/studio-portrait-good-looking-man-with-short-blond-hair-blue-eyes-black-t-shirt-looking-camera-with-eyebrow-up-showing-confidence-arrogance_132075-8423.jpg?t=st=1740622297~exp=1740625897~hmac=fbbb48fd21b98c97002be9f97a9e10986d0cf33e43e434238203901e2af8fa93&w=740"
+                            alt="">
+                        <p class="card-text"><small class="d-block">Eng Ahmed Osama</small>
+                            <small class="d-block">Front end developer</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row w-100 m-0">
+        <div class="text-center col-12 m-0 mb-1">
+            <h1>AI latest updates</h1>
+        </div>
+        <div class="row col-12 d-flex justify-content-center m-0">
+            <div
+                class="card hover success border-dark hover-light bg-dark-50 border border-3 col-8 col-md-9 col-lg-8 p-0 my-5">
+                <div class="row g-0">
+                    <div class="col-md-8 position-relative pb-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Podcast Title</h5>
+                            <div class="position-relative"><i class="fa-solid fa-calendar"></i> Mon May 25th 2025
+                                <div class="position-absolute w-50 h-25 bg-success"></div>
+                            </div>
+                            <p class="card-text mt-2 mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                                excepturi
+                                officia reiciendis? Cupiditate cumque consequuntur optio dolore alias! Nostrum sint
+                                atque, rerum architecto ab autem necessitatibus? Autem commodi laboriosam cumque quo
+                                distinctio doloremque aliquam illo consequatur similique, repellat asperiores hic
+                                temporibus quam provident. Earum?</p>
+                            <div class="card-text position-absolute bottom-0 mb-2 mb-lg-3 pb-lg-3 mb-xl-5 pb-xl-5">
+                                <div class="btn btn-success success my-1"><i class="fa-solid fa-tag"></i> Podcast</div>
+                                <div class="btn btn-success success my-1 mx-1"><i class="fa-solid fa-clock"></i> 55 mins
+                                </div>
+                                <div class="btn btn-success success my-1"><i class="fa-solid fa-play"></i> Play
+                                    Episode
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block d-lg-block skew rounded-end overflow-hidden">
+                        <img src="https://img.freepik.com/free-photo/vertical-shot-beautiful-forest-with-brown-pathway-middle_181624-4204.jpg?t=st=1740619647~exp=1740623247~hmac=bb0eb5770068f512a4e4755d05c2b6d94b6261a3735995a190c2a5d501b455dd&w=740"
+                            class="img-fluid h-100" alt="...">
+                    </div>
+                    <div class="col-md-4 d-md-none rounded overflow-hidden">
+                        <img src="https://img.freepik.com/free-photo/beautiful-japanese-forest-scene_23-2151498067.jpg?t=st=1740619560~exp=1740623160~hmac=844f4a4ae52b30421ee08dcda5a06ce3f8a1c434ddf90900d72aef7d916f5025&w=900"
+                            class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div
+                class="card hover warning border-dark hover-dark bg-light-50 border border-3 col-8 col-md-9 col-lg-8  p-0 my-5 position-relative">
+                <div class="row g-0">
+                    <div
+                        class="col-md-4 d-none d-md-block d-lg-block skew-center rounded-start overflow-hidden position-relative">
+                        <img src="https://img.freepik.com/free-photo/lonely-person-walking-desert-near-sand-dunes-sunny-day_181624-44281.jpg?t=st=1740619953~exp=1740623553~hmac=c35b0bca37f3a8613957f7e4193f0f53643220a00a61e34d870ac78bbba43b91&w=740"
+                            class="img-fluid h-100" alt="...">
+                    </div>
+                    <div class="col-md-4 d-md-none rounded overflow-hidden">
+                        <img src="https://img.freepik.com/free-photo/vertical-shot-people-riding-camels-sand-dune-desert_181624-34974.jpg?t=st=1740620017~exp=1740623617~hmac=57f59b9e28954f99aa1e5c23b3af1a73d98c3921fdafaaf4643875d031db1f12&w=900"
+                            class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8 position-relative">
+                        <div class="card-body mb-5">
+                            <h5 class="card-title">Podcast Title</h5>
+                            <div class="position-relative"><i class="fa-solid fa-calendar"></i> Mon May 25th 2025
+                                <div class="position-absolute w-50 h-25 bg-warning"></div>
+                            </div>
+                            <p class="card-text mt-2 mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                                excepturi
+                                officia reiciendis? Cupiditate cumque consequuntur optio dolore alias! Nostrum sint
+                                atque, rerum architecto ab autem necessitatibus? Autem commodi laboriosam cumque quo
+                                distinctio doloremque aliquam illo consequatur similique, repellat asperiores hic
+                                temporibus quam provident. Earum?</p>
+                            <div class="card-text position-absolute bottom-0 mb-2 mb-lg-3 pb-lg-3 mb-xl-5 pb-xl-5">
+                                <div class="btn btn-warning warning my-1"><i class="fa-solid fa-tag"></i> Podcast</div>
+                                <div class="btn btn-warning warning my-1 mx-1"><i class="fa-solid fa-clock"></i> 55 mins
+                                </div>
+                                <div class="btn btn-warning warning my-1"><i class="fa-solid fa-play"></i> Play
+                                    Episode
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="card hover primary border-dark hover-light bg-dark-50 border border-3 col-8 col-md-9 col-lg-8 p-0 my-5">
+                <div class="row g-0">
+                    <div class="col-md-8 position-relative">
+                        <div class="card-body mb-5">
+                            <h5 class="card-title">Podcast Title</h5>
+                            <div class="position-relative"><i class="fa-solid fa-calendar"></i> Mon May 25th 2025
+                                <div class="position-absolute w-50 h-25 bg-primary"></div>
+                            </div>
+                            <p class="card-text mt-2 mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                                excepturi
+                                officia reiciendis? Cupiditate cumque consequuntur optio dolore alias! Nostrum sint
+                                atque, rerum architecto ab autem necessitatibus? Autem commodi laboriosam cumque quo
+                                distinctio doloremque aliquam illo consequatur similique, repellat asperiores hic
+                                temporibus quam provident. Earum?</p>
+                            <div class="card-text position-absolute bottom-0 mb-2 mb-lg-3 pb-lg-3 mb-xl-5 pb-xl-5">
+                                <div class="btn btn-primary primary my-1"><i class="fa-solid fa-tag"></i> Podcast</div>
+                                <div class="btn btn-primary primary my-1 mx-1"><i class="fa-solid fa-clock"></i> 55 mins
+                                </div>
+                                <div class="btn btn-primary primary my-1"><i class="fa-solid fa-play"></i> Play
+                                    Episode
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block d-lg-block skew rounded-end overflow-hidden">
+                        <img src="https://img.freepik.com/free-photo/mother-son-aquarium_181624-8759.jpg?t=st=1740620247~exp=1740623847~hmac=91bcd9fd9a685f822c771bf6a1a648262a7dbc24c8c120085ce1614f5620485d&w=740"
+                            class="img-fluid h-100" alt="...">
+                    </div>
+                    <div class="col-md-4 d-md-none rounded overflow-hidden">
+                        <img src="https://img.freepik.com/free-photo/abstract-waves-foam-bubbles-blue-liquid_23-2148346929.jpg?t=st=1740620401~exp=1740624001~hmac=9fbc6acd1cd25ab7795743cd30a3568429186504dff6b763e8675f0cf749aad8&w=900"
+                            class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row p-5 text-center w-100 m-0 d-flex justify-content-center">
+            <div
+                class="hover primary btn btn-outline-dark bg-dark-50 border shadow border-dark border-3 fs-5 col-5 col-md-4 col-lg-2 m-4">
+                <div>Subscribe Now</div>
+                <a href="" class="fa-brands border-0 fa-twitter my-2 btn btn-outline-primary primary fs-1"></a>
+                <div>Go to link</div>
+            </div>
+            <div
+                class="hover success btn btn-outline-dark bg-dark-50 border shadow border-dark border-3 fs-5 col-5 col-md-4 col-lg-2 m-4">
+                <div>Subscribe Now</div>
+                <a href="" class="fa-brands border-0 fa-whatsapp my-2 btn btn-outline-success success fs-1"></a>
+                <div>Go to link</div>
+            </div>
+            <div
+                class="hover primary btn btn-outline-dark bg-dark-50 border shadow border-dark border-3 fs-5 col-5 col-md-4 col-lg-2 m-4">
+                <div>Subscribe Now</div>
+                <a href="" class="fa-brands border-0 fa-linkedin-in my-2 btn btn-outline-primary primary fs-1"></a>
+                <div>Go to link</div>
+            </div>
+            <div
+                class="hover warning btn btn-outline-dark bg-dark-50 border shadow border-dark border-3 fs-5 col-5 col-md-4 col-lg-2 m-4">
+                <div>Subscribe Now</div>
+                <a href="" class="fa-brands border-0 fa-instagram my-2 btn btn-outline-warning warning fs-1"></a>
+                <div>Go to link</div>
+            </div>
+        </div>
+        <div class="row bg-dark w-100 m-0">
+            <div class="card col-12 col-lg-4 text-bg-dark mb-3 text-center p-3 border-start-0 border-end-0 rounded-0">
+                <div class="card-header text-warning"><img class="rounded-start warning hover me-2"
+                        src="https://img.freepik.com/free-vector/initials-letter-colorful-logo-design_474888-4328.jpg?t=st=1740707880~exp=1740711480~hmac=59c8b4a89795a3e87b423a7386c3bb956a9f605dba4b2010fdb4bfe61e4750d9&w=900"
+                        style="width: 80px; height: 80px;"> Good
+                    Company</div>
+                <div class="card-body" style="list-style: none;line-height: 60px;">
+                    <li>Tel:000-000-000</li>
+                    <li>Address:Egypt</li>
+                    <li>Fax:000-000-000</li>
+                </div>
+            </div>
+            <div class="card col-12 col-lg-4 text-bg-dark mb-3 text-center p-3 border-start-0 border-end-0 rounded-0">
+                <div class="card-header text-warning"><img class="rounded-start warning hover me-2"
+                        src="https://img.freepik.com/free-vector/initials-letter-colorful-logo-design_474888-4328.jpg?t=st=1740707880~exp=1740711480~hmac=59c8b4a89795a3e87b423a7386c3bb956a9f605dba4b2010fdb4bfe61e4750d9&w=900"
+                        style="width: 80px; height: 80px;"> Important
+                    Links</div>
+                <div class="card-body" style="list-style: none;line-height: 60px;">
+                    <li>Visit Us</li>
+                    <li>Take a look</li>
+                    <li>Your health is more important</li>
+                </div>
+            </div>
+            <div class="card col-12 col-lg-4 text-bg-dark mb-3 text-center p-3 border-start-0 border-end-0 rounded-0">
+                <div class="card-header text-warning"><img class="rounded-start warning hover me-2"
+                        src="https://img.freepik.com/free-vector/initials-letter-colorful-logo-design_474888-4328.jpg?t=st=1740707880~exp=1740711480~hmac=59c8b4a89795a3e87b423a7386c3bb956a9f605dba4b2010fdb4bfe61e4750d9&w=900"
+                        style="width: 80px; height: 80px;"> Vision
+                </div>
+                <div class="card-body" style="list-style: none;line-height: 60px;">
+                    <li>Serveice for all</li>
+                    <li>Provide best content</li>
+                    <li>you will be better than before</li>
+                </div>
+            </div>
+            <p
+                class="mb-3 bg-dark border border-secondary border-end-0 border-start-0 text-center p-2 w-100 text-warning">
+                COPYRIGHT &COPY; 2025 AHMED OSAMA BEST CREATIVE CONTENT</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="text-center position-fixed top-0 align-content-center load"
+        style="height: 100vh; z-index: 400; width: 100%;">
+        <div class="text-center text-white">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
